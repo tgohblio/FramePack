@@ -29,7 +29,7 @@ from diffusers_helper.bucket_tools import find_nearest_bucket
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--share', action='store_true')
+parser.add_argument('--share', action='store_true', default=True)
 parser.add_argument("--server", type=str, default='0.0.0.0')
 parser.add_argument("--port", type=int, required=False)
 parser.add_argument("--inbrowser", action='store_true')
@@ -406,5 +406,4 @@ block.launch(
     server_port=args.port,
     share=args.share,
     inbrowser=args.inbrowser,
-    share=True,
 )
